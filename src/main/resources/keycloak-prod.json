@@ -1,0 +1,11 @@
+{
+  "realm": "",
+  "auth-server-url": "https://login.tse.jus.br/auth",
+  "ssl-required": "external",
+  "resource": "",
+  "credentials": {
+    "secret": ""
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}

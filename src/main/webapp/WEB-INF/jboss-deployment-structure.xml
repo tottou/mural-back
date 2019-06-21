@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <exclude-subsystems>
+            <subsystem name="jaxrs" />
+        </exclude-subsystems>
+        <exclusions>
+            <!-- Exclude RestEasy conflicts -->
+            <module name="javaee.api" />
+            <module name="javax.ws.rs.api"/>
+            <module name="org.jboss.resteasy.resteasy-jaxrs" />
+        </exclusions>
+
+        <dependencies>
+            <module name="org.hsqldb"/>
+            <module name="org.springframework.spring">
+                <imports>
+                    <include path="META-INF**" />
+                    <include path="org**" />
+                </imports>
+            </module>
+            <module name="com.oracle"/>
+            <module name="org.hibernate.commons-annotations"/> 
+            <module name="org.hibernate"/>
+            <module name="org.aopalliance"/>
+            <module name="org.aspectj"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
+
